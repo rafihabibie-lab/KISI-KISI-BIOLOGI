@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materi & Kuis SAS Biologi Kelas XI</title>
+    <title>Bahan Ajar Lengkap Biologi Kelas XI - SAS</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --bg-color: #f4f7f6;
-            --text-color: #333;
+            --primary-color: #1a365d; /* Biru Gelap Elegan */
+            --secondary-color: #2b6cb0; /* Biru Terang */
+            --bg-color: #f7fafc;
+            --text-color: #2d3748;
             --card-bg: #ffffff;
-            --accent-color: #e74c3c;
+            --accent-color: #e53e3e;
+            --warning-bg: #fffaf0;
+            --warning-border: #ed8936;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
             color: var(--text-color);
             background-color: var(--bg-color);
             margin: 0;
@@ -24,189 +26,225 @@
         }
 
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 30px 0;
+            padding: 40px 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        header h1 { margin: 0; font-size: 28px; }
-        header p { margin: 10px 0 0; font-size: 16px; opacity: 0.9; }
+        header h1 { margin: 0; font-size: 32px; font-weight: 700; letter-spacing: 0.5px;}
+        header p { margin: 15px 0 0; font-size: 18px; opacity: 0.9; }
 
         .container {
-            max-width: 900px;
-            margin: 30px auto;
+            max-width: 950px;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
         /* Navigasi */
         .nav-links {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         .nav-links a {
             display: inline-block;
             background-color: var(--secondary-color);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             margin: 5px;
-            border-radius: 20px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .nav-links a:hover { background-color: #2980b9; }
+        .nav-links a:hover { background-color: var(--primary-color); transform: translateY(-2px); }
 
         /* Materi Accordion */
         .accordion {
             background-color: var(--card-bg);
             color: var(--primary-color);
             cursor: pointer;
-            padding: 18px;
+            padding: 20px;
             width: 100%;
             border: none;
             text-align: left;
             outline: none;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 20px;
+            font-weight: 700;
             transition: 0.4s;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-left: 6px solid var(--secondary-color);
         }
 
         .active, .accordion:hover {
-            background-color: #e8f4fd;
-            border-left: 5px solid var(--secondary-color);
+            background-color: #ebf8ff;
         }
 
         .accordion:after {
-            content: '\002B'; /* Plus sign */
+            content: '\002B';
             color: var(--secondary-color);
             font-weight: bold;
-            float: right;
-            margin-left: 5px;
-            font-size: 24px;
+            font-size: 28px;
+            transition: transform 0.3s ease;
         }
 
         .active:after {
-            content: "\2212"; /* Minus sign */
+            content: "\2212";
+            transform: rotate(180deg);
         }
 
         .panel {
-            padding: 0 18px;
+            padding: 0 20px;
             background-color: white;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            border-radius: 0 0 8px 8px;
-            margin-top: -10px;
-            margin-bottom: 10px;
-            border: 1px solid #eee;
+            transition: max-height 0.4s ease-out;
+            border-radius: 0 0 10px 10px;
+            margin-top: -15px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
             border-top: none;
         }
 
         .panel-content {
-            padding: 20px 0;
+            padding: 30px 0;
         }
 
-        .panel h4 { color: var(--secondary-color); margin-bottom: 5px; margin-top: 15px;}
-        .panel ul { margin-top: 5px; padding-left: 20px;}
+        /* Typography di dalam Materi */
+        .panel h4 { 
+            color: var(--primary-color); 
+            margin-top: 30px; 
+            margin-bottom: 15px; 
+            font-size: 18px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        .panel h5 {
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .panel p { margin-bottom: 15px; }
+        .panel ul { margin-top: 5px; padding-left: 20px; margin-bottom: 20px;}
         .panel li { margin-bottom: 10px; }
         
+        /* Badge Indikator */
+        .badge-container { margin-bottom: 15px; }
         .badge {
             display: inline-block;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 13px;
             font-weight: bold;
             color: white;
             margin-right: 5px;
+            margin-bottom: 5px;
         }
-        .c1 { background-color: #3498db; }
-        .c2 { background-color: #2ecc71; }
-        .c3 { background-color: #f39c12; }
-        .c4 { background-color: #e74c3c; }
+        .c1 { background-color: #4299e1; } /* C1 Biru */
+        .c2 { background-color: #48bb78; } /* C2 Hijau */
+        .c3 { background-color: #ed8936; } /* C3 Oranye */
+        .c4 { background-color: #f56565; } /* C4 Merah */
         
-        .jebakan {
-            background-color: #ffebee;
-            border-left: 4px solid var(--accent-color);
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 0.9em;
+        /* Kotak Info/Jebakan */
+        .info-box {
+            background-color: #ebf8ff;
+            border-left: 5px solid #4299e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
         }
+        .warning-box {
+            background-color: #fff5f5;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-text { font-weight: 700; color: var(--primary-color); }
 
         /* Kuis Section */
         .quiz-container {
             background: var(--card-bg);
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-top: 40px;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-top: 60px;
+            border-top: 5px solid var(--secondary-color);
         }
+
+        .quiz-container h2 { text-align: center; color: var(--primary-color); margin-bottom: 10px;}
+        .quiz-desc { text-align: center; color: #718096; margin-bottom: 40px; }
 
         .question-card {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
         }
 
-        .question-text { font-weight: 600; margin-bottom: 15px; font-size: 1.05em; }
+        .question-text { font-weight: 600; margin-bottom: 15px; font-size: 1.1em; color: #2d3748; }
 
         .options label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             cursor: pointer;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            transition: background 0.2s;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e0;
+            transition: all 0.2s;
+            background-color: #f8fafc;
         }
 
-        .options label:hover { background-color: #f0f8ff; }
-        .options input { margin-right: 10px; }
+        .options label:hover { background-color: #ebf8ff; border-color: var(--secondary-color); }
+        .options input { margin-right: 12px; transform: scale(1.2); }
 
         .pembahasan {
             display: none;
-            margin-top: 15px;
-            padding: 15px;
-            background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: var(--warning-bg);
+            border-left: 5px solid var(--warning-border);
             font-size: 0.95em;
-            border-radius: 4px;
+            border-radius: 0 8px 8px 0;
+            color: #744210;
         }
 
         .btn {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border: none;
-            padding: 15px 20px;
-            border-radius: 5px;
+            padding: 18px 20px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 18px;
             font-weight: bold;
             display: block;
             width: 100%;
-            margin-top: 20px;
-            transition: background 0.3s;
+            margin-top: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .btn:hover { background-color: #1a252f; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
         
         #score-display {
             display: none;
             text-align: center;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
             margin-top: 30px;
-            padding: 20px;
-            background-color: #d4edda;
-            color: #155724;
-            border-radius: 8px;
+            padding: 25px;
+            background-color: #c6f6d5;
+            color: #22543d;
+            border-radius: 10px;
+            border: 2px solid #48bb78;
         }
     </style>
 </head>
@@ -214,53 +252,88 @@
 
     <header>
         <h1>Bahan Ajar Interaktif Biologi Kelas XI</h1>
-        <p>Persiapan Sumatif Akhir Semester (SAS) - Materi Detail & 40 Soal Kuis</p>
+        <p>Persiapan Matang Sumatif Akhir Semester (SAS)</p>
     </header>
 
     <div class="container">
         
         <div class="nav-links">
-            <a href="#materi">📚 Materi Belajar</a> 
-            <a href="#kuis">📝 Kuis Interaktif</a>
+            <a href="#materi">📚 Pelajari Materi Lengkap</a> 
+            <a href="#kuis">📝 Uji Kemampuan (40 Soal)</a>
         </div>
 
         <!-- ================= MATERI ================= -->
         <div id="materi">
-            <h2 style="text-align: center; color: var(--primary-color);">📚 Rangkuman Materi Detail</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Klik pada judul sub-topik untuk membuka detail materi.</p>
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 30px;">📖 Bahan Bacaan & Rangkuman Terpadu</h2>
 
             <!-- BAB 1 -->
             <button class="accordion">BAB 1: Sel dan Transpor Membran</button>
             <div class="panel">
                 <div class="panel-content">
-                    <h4>A. Struktur dan Fungsi Organel Sel</h4>
-                    <div><span class="badge c3">C3</span><span class="badge c2">C2</span></div>
-                    <ul>
-                        <li><strong>Substansi Genetik (Nukleus):</strong> Pusat komando sel. Menyimpan DNA dan mengatur sintesis protein. Di dalamnya ada Nukleolus (sintesis ribosom).</li>
-                        <li><strong>Oksidasi Sel (Mitokondria):</strong> Tempat respirasi aerob menghasilkan ATP. Memiliki membran dalam berlekuk bernama <em>Krista</em>.</li>
-                        <li><strong>RE Kasar:</strong> Ditempeli ribosom, berfungsi sintesis protein.</li>
-                        <li><strong>RE Halus:</strong> Tanpa ribosom, berfungsi sintesis lipid (lemak) dan detoksifikasi racun.</li>
-                        <li><strong>Kloroplas:</strong> Khas tumbuhan, tempat fotosintesis. Kaya di jaringan palisade dan spons daun.</li>
-                    </ul>
-                    <div class="jebakan"><strong>Jebakan Soal:</strong> Pada sel tumbuhan, tempat oksidasi (respirasi) tetap di Mitokondria, bukan di Kloroplas. Kloroplas mengubah cahaya jadi glukosa.</div>
+                    <p>Sel adalah unit struktural dan fungsional terkecil dari kehidupan. Memahami sel berarti memahami bagaimana tubuh organisme bekerja pada tingkat mikroskopis.</p>
 
-                    <h4>B. Perbedaan Sel Hewan vs Tumbuhan</h4>
-                    <div><span class="badge c2">C2</span></div>
+                    <h4>A. Organel Sel: Si Pekerja Keras</h4>
+                    <div class="badge-container">
+                        <span class="badge c3">C3</span> Mengidentifikasi substansi genetik & tempat oksidasi<br>
+                        <span class="badge c2">C2</span> Membedakan RE kasar & halus
+                    </div>
+                    <p>Di dalam sitoplasma sel eukariotik, terdapat berbagai organel dengan tugas spesifik:</p>
                     <ul>
-                        <li><strong>Sel Tumbuhan:</strong> Memiliki Dinding Sel (selulosa), Kloroplas, dan Vakuola besar/tunggal.</li>
-                        <li><strong>Sel Hewan:</strong> Tidak punya dinding sel & kloroplas, memiliki Sentriol, Lisosom, dan vakuola kecil.</li>
+                        <li><strong>Nukleus (Inti Sel):</strong> Merupakan pusat komando. Di dalamnya terdapat benang kromatin (DNA) yang menyimpan informasi genetik, serta nukleolus (anak inti) yang bertugas menyintesis ribosom. <em>Jawaban untuk substansi genetik.</em></li>
+                        <li><strong>Mitokondria:</strong> Dikenal sebagai "the powerhouse of the cell". Memiliki membran dalam berlekuk yang disebut <span class="highlight-text">krista</span>. Tempat berlangsungnya respirasi aerob (oksidasi) untuk menghasilkan energi (ATP). <em>Jawaban untuk tempat oksidasi.</em></li>
+                        <li><strong>Retikulum Endoplasma (RE):</strong>
+                            <ul>
+                                <li><em>RE Kasar:</em> Permukaannya ditempeli ribosom, berfungsi untuk sintesis protein (terutama yang akan diekspor).</li>
+                                <li><em>RE Halus:</em> Tidak ada ribosom. Berfungsi menyintesis lipid (lemak), metabolisme karbohidrat, dan detoksifikasi racun (banyak di sel hati).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Badan Golgi:</strong> Berperan sebagai "kantor pos" sel. Memodifikasi, menyortir, dan mengemas protein dari RE untuk disekresikan keluar sel.</li>
+                        <li><strong>Lisosom:</strong> Berisi enzim hidrolitik (pencerna). Berperan dalam pencernaan intraseluler (autofagi).</li>
+                        <li><strong>Kloroplas:</strong> Organel khusus tumbuhan (dan alga). Berisi klorofil untuk fotosintesis. Paling banyak ditemukan di <span class="highlight-text">jaringan palisade (jaringan tiang)</span> daun.</li>
+                    </ul>
+                    <div class="warning-box">
+                        <strong>⚠️ Jebakan Soal:</strong> Ingat, tempat oksidasi sel (respirasi) tetap di <strong>Mitokondria</strong>, baik pada sel hewan maupun tumbuhan. Kloroplas hanya untuk fotosintesis (mengubah cahaya jadi glukosa).
+                    </div>
+
+                    <h4>B. Perbedaan Sel Hewan dan Tumbuhan</h4>
+                    <div class="badge-container"><span class="badge c2">C2</span> Menentukan ciri struktural pembeda</div>
+                    <p>Secara umum, sel hewan dan tumbuhan memiliki organel yang sama, KECUALI:</p>
+                    <ul>
+                        <li><strong>Sel Tumbuhan memiliki:</strong> Dinding sel (dari selulosa, membuat kaku), Kloroplas, dan Vakuola sentral yang besar (menjaga tekanan turgor).</li>
+                        <li><strong>Sel Hewan memiliki:</strong> Sentriol (untuk pembelahan sel) dan Lisosom (umumnya). Sel hewan tidak memiliki dinding sel dan kloroplas.</li>
                     </ul>
 
-                    <h4>C. Transpor Membran</h4>
-                    <div><span class="badge c2">C2</span><span class="badge c3">C3</span><span class="badge c4">C4</span></div>
+                    <h4>C. Transpor Membran: Lalu Lintas Zat</h4>
+                    <div class="badge-container">
+                        <span class="badge c2">C2</span> Fagositosis, pinositosis, difusi, osmosis<br>
+                        <span class="badge c3">C3</span> Karakteristik transpor aktif<br>
+                        <span class="badge c4">C4</span> Memprediksi arah perpindahan air
+                    </div>
+                    <p>Membran sel bersifat semipermeabel (hanya zat tertentu yang bisa lewat). Teori yang menjelaskan struktur membran ini adalah <strong>Model Mozaik Cair</strong> (Singer & Nicolson), yang menyatakan protein mengapung di lapisan lipid bilayer yang dinamis.</p>
+                    
+                    <h5>1. Transpor Pasif (Tanpa Energi/ATP)</h5>
                     <ul>
-                        <li><strong>Pasif (Tanpa Energi):</strong> Difusi (zat dari konsentrasi tinggi ke rendah) dan Osmosis (khusus perpindahan air melewati membran semipermeabel).</li>
-                        <li><strong>Aktif (Butuh Energi/ATP):</strong> Memindahkan zat melawan gradien konsentrasi (rendah ke tinggi) dengan bantuan protein pembawa. Contoh: Pompa Natrium-Kalium.</li>
-                        <li><strong>Fagositosis:</strong> Sel memakan partikel padat (contoh: sel darah putih memakan bakteri).</li>
-                        <li><strong>Pinositosis:</strong> Sel meminum tetesan cairan.</li>
-                        <li><strong>Analisis Percobaan (C4):</strong> Kentang di larutan gula pekat (Hipertonik) menyebabkan air keluar dari sel, kentang jadi lembek/keriput. Kentang di air murni (Hipotonik) menyebabkan air masuk, kentang jadi tegang/keras (Turgid).</li>
-                        <li><strong>Model Mozaik Cair:</strong> Teori membran sel oleh Singer & Nicolson, protein mengapung di lipid bilayer.</li>
+                        <li><strong>Difusi:</strong> Perpindahan zat dari konsentrasi tinggi ke rendah. Contoh: O2 masuk ke sel.</li>
+                        <li><strong>Osmosis:</strong> Khusus perpindahan air (H2O) dari zat terlarut rendah (hipotonik) ke zat terlarut tinggi (hipertonik) melewati membran.</li>
+                        <li><strong>Difusi Terfasilitasi:</strong> Menggunakan protein pembawa, tapi tetap tanpa energi (contoh: glukosa masuk sel).</li>
                     </ul>
+
+                    <h5>2. Transpor Aktif (Membutuhkan Energi/ATP)</h5>
+                    <ul>
+                        <li>Memindahkan zat <span class="highlight-text">melawan gradien konsentrasi</span> (dari rendah ke tinggi) dengan bantuan protein pembawa. Contoh: Pompa Natrium-Kalium.</li>
+                    </ul>
+
+                    <h5>3. Transpor Massal (Endositosis & Eksositosis)</h5>
+                    <ul>
+                        <li><strong>Fagositosis:</strong> Sel "makan" partikel padat besar. Contoh: Sel darah putih (makrofag) membungkus bakteri. Membentuk pseudopodia (kaki semu).</li>
+                        <li><strong>Pinositosis:</strong> Sel "minum" cairan/tetesan zat terlarut dari luar.</li>
+                    </ul>
+
+                    <h5>4. Analisis Percobaan Osmosis (Level C4)</h5>
+                    <div class="info-box">
+                        Jika kentang direndam dalam larutan gula pekat (hipertonik), air akan keluar dari sel kentang. Akibatnya sel kehilangan tekanan turgor, kentang menjadi <strong>lembek/keriput (plasmolisis)</strong>.<br>
+                        Sebaliknya, jika direndam di air murni (hipotonik), air masuk ke sel, kentang menjadi <strong>keras/tegang (turgid)</strong>.
+                    </div>
                 </div>
             </div>
 
@@ -268,22 +341,38 @@
             <button class="accordion">BAB 2: Sistem Gerak Manusia</button>
             <div class="panel">
                 <div class="panel-content">
-                    <h4>A. Tulang Rawan & Tulang Keras</h4>
-                    <div><span class="badge c2">C2</span><span class="badge c1">C1</span><span class="badge c3">C3</span></div>
+                    <p>Sistem gerak manusia terdiri dari tulang, otot, dan sendi yang bekerja sama. Tulang sebagai alat gerak pasif, sedangkan otot sebagai alat gerak aktif.</p>
+
+                    <h4>A. Tulang: Rawan dan Keras</h4>
+                    <div class="badge-container">
+                        <span class="badge c2">C2</span> Membedakan komponen penyusun tulang<br>
+                        <span class="badge c1">C1</span> Zat matriks tulang rawan & keras
+                    </div>
                     <ul>
-                        <li><strong>Tulang Rawan (Kartilago):</strong> Matriks lentur dari <strong>Kolagen & Kondroitin Sulfat</strong>. Selnya Kondrosit. Tidak punya pembuluh darah.</li>
-                        <li><strong>Tulang Keras (Osteon):</strong> Matriks keras dari <strong>Kalsium Fosfat</strong>. Selnya Osteosit. Memiliki Saluran Havers berisi pembuluh darah.</li>
-                        <li><strong>Tulang Pipa:</strong> Berbentuk silinder panjang (Femur/paha, Humerus/lengan).</li>
-                        <li><strong>Kelainan:</strong> Osteoporosis (keropos karena kurang kalsium), Skoliosis (bengkok ke samping), Kifosis (bungkuk ke depan).</li>
+                        <li><strong>Tulang Rawan (Kartilago):</strong> Bersifat lentur. Matriksnya tersusun dari serat <span class="highlight-text">kolagen dan kondroitin sulfat</span>. Selnya disebut kondrosit. Tidak memiliki pembuluh darah dan saraf (nutrisi secara difusi). Contoh: tulang hidung, telinga, ujung tulang rusuk.</li>
+                        <li><strong>Tulang Keras (Osteon):</strong> Bersifat keras dan kaku. Matriksnya didominasi oleh <span class="highlight-text">kalsium fosfat</span> dan kalsium karbonat. Selnya disebut osteosit. Memiliki sistem Havers (saluran berisi pembuluh darah dan saraf).</li>
+                        <li><strong>Tulang Pipa:</strong> Tulang panjang berbentuk silinder. Contoh: Femur (paha), Humerus (lengan atas), Tibia (kering), Fibula (betis).</li>
+                    </ul>
+                    <div class="warning-box">
+                        <strong>⚠️ Jebakan Soal:</strong> Osteoporosis (tulang keropos) disebabkan oleh kurangnya kalsium dan penurunan hormon estrogen (pada lansia/wanita menopause). Jangan tertukar dengan rakitis (kekurangan vitamin D pada anak).
+                    </div>
+
+                    <h4>B. Otot: Alat Gerak Aktif</h4>
+                    <p>Terdapat 3 jenis otot: Otot Lurik (rangka, sadar), Otot Polos (organ dalam, tidak sadar), dan Otot Jantung (miokardium, tidak sadar).</p>
+                    <ul>
+                        <li><strong>Mekanisme Kerja:</strong> Otot Bisep (lengan depan) berkontraksi untuk menekuk lengan (fleksi). Otot Trisep (lengan belakang) berkontraksi untuk meluruskan lengan (ekstensi). Kerja berlawanan ini disebut <span class="highlight-text">Antagonis</span>.</li>
+                        <li><strong>Kelelahan Otot:</strong> Terjadi karena penumpukan <span class="highlight-text">Asam Laktat</span> akibat respirasi anaerob saat otot dipaksa bekerja keras tanpa cukup oksigen.</li>
+                        <li><strong>Atrofi:</strong> Pengecilan otot karena tidak digunakan lama (misal: pasien di-cast). Kebalikannya adalah Hipertrofi (otot membesar karena latihan).</li>
                     </ul>
 
-                    <h4>B. Otot dan Persendian</h4>
-                    <div><span class="badge c2">C2</span><span class="badge c3">C3</span><span class="badge c1">C1</span></div>
+                    <h4>C. Persendian (Artrologi)</h4>
+                    <div class="badge-container"><span class="badge c3">C3</span> Menentukan jenis sendi dari skema</div>
+                    <p>Sendi adalah tempat pertemuan dua tulang. Sendi yang memungkinkan gerakan bebas disebut Diartrosis:</p>
                     <ul>
-                        <li><strong>Antagonis:</strong> Otot Bisep (menekuk) vs Trisep (meluruskan).</li>
-                        <li><strong>Kelelahan Otot:</strong> Akibat penumpukan <strong>Asam Laktat</strong> dari respirasi anaerob.</li>
-                        <li><strong>Atrofi:</strong> Otot mengecil karena lama tidak digerakkan (misal di-cast).</li>
-                        <li><strong>Sendi:</strong> Engsel (siku/lutut), Putar (leher atlas), Pelana (ibu jari), Peluru (bahu/pinggul).</li>
+                        <li><strong>Sendi Engsel:</strong> Gerakan satu arah (siku, lutut, ruas jari).</li>
+                        <li><strong>Sendi Putar:</strong> Gerakan berputar (tulang atlas dengan tengkorak).</li>
+                        <li><strong>Sendi Pelana:</strong> Gerakan dua arah (pangkal ibu jari).</li>
+                        <li><strong>Sendi Peluru:</strong> Gerakan ke segala arah (bahu, pinggul).</li>
                     </ul>
                 </div>
             </div>
@@ -292,31 +381,51 @@
             <button class="accordion">BAB 3: Sistem Peredaran Darah</button>
             <div class="panel">
                 <div class="panel-content">
-                    <h4>A. Darah dan Transfusi</h4>
-                    <div><span class="badge c3">C3</span><span class="badge c2">C2</span></div>
+                    <p>Sistem ini berfungsi mengangkut oksigen, nutrisi, hormon, dan zat sisa metabolisme. Terdiri dari jantung, pembuluh darah, dan darah itu sendiri.</p>
+
+                    <h4>A. Darah dan Komponennya</h4>
+                    <div class="badge-container"><span class="badge c2">C2</span> Ciri pembuluh vena/arteri</div>
                     <ul>
-                        <li><strong>Aglutinasi (Penggumpalan):</strong> Terjadi jika Antigen di eritrosit pendonor bertemu Antibodi plasma resipien yang berlawanan. (Contoh: Donor A ke Resipien B).</li>
-                        <li><strong>Eritroblastosis Fetalis:</strong> Ibu Rh- mengandung janin Rh+ pada kehamilan kedua. Antibodi ibu menyerang sel darah merah janin.</li>
-                        <li><strong>Komponen Darah:</strong> Plasma, Eritrosit (O2), Leukosit (imun), Trombosit (pembekuan).</li>
+                        <li><strong>Plasma Darah:</strong> Cairan kekuningan (55%), berisi air, protein (albumin, fibrinogen), dan zat terlarut.</li>
+                        <li><strong>Eritrosit (Sel Darah Merah):</strong> Mengandung hemoglobin (Hb) untuk mengikat O2. Tidak berinti.</li>
+                        <li><strong>Leukosit (Sel Darah Putih):</strong> Sistem pertahanan tubuh (imun).</li>
+                        <li><strong>Trombosit:</strong> Keping darah untuk pembekuan.</li>
                     </ul>
 
                     <h4>B. Jantung dan Pembuluh Darah</h4>
-                    <div><span class="badge c3">C3</span><span class="badge c2">C2</span></div>
+                    <div class="badge-container"><span class="badge c3">C3</span> Struktur jantung & pembuluh</div>
+                    <p>Jantung memiliki 4 ruang: Serambi (Atrium) di atas, Bilik (Ventrikel) di bawah.</p>
                     <ul>
-                        <li><strong>Bilik Kiri (Ventrikel Kiri):</strong> Dinding paling tebal karena memompa darah ke seluruh tubuh.</li>
-                        <li><strong>Vena:</strong> Membawa darah ke jantung, punya katup (valvula), dinding tipis. (Pengecualian: Vena Pulmonalis kaya O2).</li>
-                        <li><strong>Arteri Pulmonalis:</strong> Membawa darah kaya CO2 dari jantung ke paru-paru.</li>
-                        <li><strong>Peredaran Terbuka:</strong> Darah keluar ke rongga tubuh (sinus). Terjadi pada Invertebrata (serangga) dan Pisces (ikan).</li>
-                        <li><strong>Limfa:</strong> Mengangkut lemak (asam lemak) dari usus halus.</li>
+                        <li><strong>Bilik Kiri (Ventrikel Kiri):</strong> Memiliki dinding <span class="highlight-text">paling tebal</span> karena harus memompa darah ke seluruh tubuh melalui Aorta.</li>
+                        <li><strong>Katup:</strong> Trikuspid (kanan), Bikuspid/Mitral (kiri) mencegah darah balik ke serambi. Katup Semilunaris mencegah darah balik dari pembuluh ke bilik.</li>
+                    </ul>
+                    <p><strong>Pembuluh Darah:</strong></p>
+                    <ul>
+                        <li><strong>Arteri (Nadi):</strong> Membawa darah keluar dari jantung. Dinding tebal, elastis, tekanan kuat.</li>
+                        <li><strong>Vena (Balik):</strong> Membawa darah ke jantung. Dinding tipis, memiliki <span class="highlight-text">katup (valvula)</span> agar darah tidak balik, tekanan lemah.</li>
+                    </ul>
+                    <div class="info-box">
+                        <strong>Pengecualian Penting:</strong><br>
+                        1. <strong>Arteri Pulmonalis</strong> adalah arteri yang membawa darah kaya CO2 (dari jantung ke paru-paru).<br>
+                        2. <strong>Vena Pulmonalis</strong> adalah vena yang membawa darah kaya O2 (dari paru-paru ke jantung).
+                    </div>
+
+                    <h4>C. Transfusi Darah dan Rhesus</h4>
+                    <div class="badge-container">
+                        <span class="badge c3">C3</span> Aglutinasi transfusi & Eritroblastosis
+                    </div>
+                    <ul>
+                        <li><strong>Aglutinasi (Penggumpalan):</strong> Terjadi jika Antigen di eritrosit pendonor bertemu Antibodi plasma resipien yang berlawanan. Contoh: Donor A (punya antigen A) ke Resipien B (punya antibodi anti-A) = Menggumpal.</li>
+                        <li><strong>Eritroblastosis Fetalis:</strong> Terjadi jika Ibu <strong>Rh-</strong> mengandung janin <strong>Rh+</strong> pada kehamilan kedua. Antibodi ibu (anti-Rh) yang terbentuk di kehamilan pertama menyerang eritrosit janin di kehamilan berikutnya.</li>
                     </ul>
 
-                    <h4>C. Pembekuan Darah</h4>
-                    <div><span class="badge c3">C3</span></div>
-                    <ul>
-                        <li>Trombosit pecah → keluarkan <strong>Tromboplastin</strong>.</li>
-                        <li>Tromboplastin + Vit K + Ca → ubah <strong>Protrombin</strong> menjadi <strong>Trombin</strong>.</li>
-                        <li>Trombin mengubah <strong>Fibrinogen</strong> menjadi <strong>Fibrin</strong> (benang pembeku).</li>
-                    </ul>
+                    <h4>D. Mekanisme Pembekuan Darah</h4>
+                    <div class="badge-container"><span class="badge c3">C3</span> Mengurutkan skema pembekuan</div>
+                    <ol>
+                        <li>Trombosit pecah mengeluarkan <strong>Tromboplastin (Trombokinase)</strong>.</li>
+                        <li>Dengan bantuan Vitamin K dan Ion Kalsium (Ca2+), Tromboplastin mengubah <strong>Protrombin</strong> (dari hati) menjadi <strong>Trombin</strong>.</li>
+                        <li>Trombin mengubah <strong>Fibrinogen</strong> menjadi <strong>Fibrin</strong> (benang-benang protein yang menjerat sel darah).</li>
+                    </ol>
                 </div>
             </div>
 
@@ -324,31 +433,55 @@
             <button class="accordion">BAB 4: Pembelahan Sel</button>
             <div class="panel">
                 <div class="panel-content">
-                    <h4>Mitosis, Meiosis, dan Gametogenesis</h4>
-                    <div><span class="badge c2">C2</span><span class="badge c1">C1</span></div>
+                    <p>Pembelahan sel bertujuan untuk pertumbuhan, perbaikan jaringan, dan reproduksi. Terdiri dari Mitosis dan Meiosis.</p>
+
+                    <h4>A. Mitosis</h4>
+                    <div class="badge-container"><span class="badge c2">C2</span> Lokasi mitosis</div>
                     <ul>
-                        <li><strong>Mitosis:</strong> Untuk pertumbuhan & regenerasi. Terjadi di jaringan meristem (ujung akar/batang). Menghasilkan 2 sel anakan diploid (identik).</li>
-                        <li><strong>Meiosis:</strong> Untuk menghasilkan sel gamet (kelamin). Menghasilkan 4 sel anakan haploid.</li>
-                        <li><strong>Spermatogenesis:</strong> 1 sel induk → 4 sperma fungsional.</li>
-                        <li><strong>Oogenesis:</strong> 1 sel induk → 1 ovum fungsional + 3 badan polar (mengering).</li>
-                        <li><strong>Teori Sel:</strong> "Omnis cellula e cellula" (Sel berasal dari sel sebelumnya) - Rudolf Virchow.</li>
+                        <li><strong>Tujuan:</strong> Pertumbuhan dan regenerasi (perbaikan jaringan).</li>
+                        <li><strong>Lokasi:</strong> Sel tubuh (somatis). Pada tumbuhan, terjadi di <span class="highlight-text">jaringan meristem</span> (ujung akar, ujung batang, kambium).</li>
+                        <li><strong>Hasil:</strong> 2 sel anakan yang <em>identik</em> dan diploid (2n).</li>
+                    </ul>
+
+                    <h4>B. Meiosis</h4>
+                    <div class="badge-container">
+                        <span class="badge c2">C2</span> Tujuan meiosis & Gametogenesis
+                    </div>
+                    <ul>
+                        <li><strong>Tujuan:</strong> Menghasilkan sel gamet (kelamin) untuk reproduksi seksual.</li>
+                        <li><strong>Lokasi:</strong> Organ reproduksi (testis dan ovarium).</li>
+                        <li><strong>Hasil:</strong> 4 sel anakan yang haploid (n) dan bervariasi (karena pindah silang).</li>
+                    </ul>
+                    
+                    <h5>Gametogenesis (Pembentukan Gamet)</h5>
+                    <ul>
+                        <li><strong>Spermatogenesis:</strong> 1 sel induk (spermatogonium) → menghasilkan <strong>4 sperma</strong> fungsional.</li>
+                        <li><strong>Oogenesis:</strong> 1 sel induk (oogonium) → menghasilkan <strong>1 ovum</strong> fungsional + 3 badan polar (polosit) yang mengering. Hal ini untuk menghemat sitoplasma dan nutrisi bagi ovum.</li>
+                    </ul>
+
+                    <h4>C. Teori Sel</h4>
+                    <div class="badge-container"><span class="badge c1">C1</span> Tokoh & prinsip teori sel</div>
+                    <ul>
+                        <li>Robert Hooke: Penemu sel (pada irisan gabus).</li>
+                        <li>Schleiden & Schwann: Sel adalah unit struktural dan fungsional makhluk hidup.</li>
+                        <li><strong>Rudolf Virchow:</strong> "Omnis cellula e cellula" (Setiap sel berasal dari sel sebelumnya).</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <hr style="border: 0; height: 1px; background: #ddd; margin: 40px 0;">
+        <hr style="border: 0; height: 1px; background: #cbd5e0; margin: 50px 0;">
 
         <!-- ================= KUIS ================= -->
         <div id="kuis" class="quiz-container">
-            <h2 style="text-align: center; color: var(--primary-color);">📝 Kuis Interaktif SAS Biologi (40 Soal)</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 30px;">Pilih jawaban yang paling tepat. Pembahasan akan muncul setelah Anda memilih opsi.</p>
+            <h2>📝 Uji Pemahaman: Kuis Interaktif (40 Soal)</h2>
+            <p class="quiz-desc">Pilih jawaban yang paling tepat. Pembahasan mendalam akan otomatis muncul setelah Anda menjawab.</p>
             
             <form id="quiz-form">
-                <!-- Soal akan di-generate oleh JavaScript di sini -->
+                <!-- Soal akan di-generate oleh JavaScript -->
             </form>
 
-            <button type="button" class="btn" onclick="hitungSkor()">Selesai & Lihat Skor</button>
+            <button type="button" class="btn" onclick="hitungSkor()">Selesai & Lihat Nilai Akhir</button>
             <div id="score-display"></div>
         </div>
 
@@ -448,17 +581,18 @@
             const pElement = document.getElementById(`p-${index}`);
             pElement.style.display = 'block';
             
-            // Highlight jawaban
             const selected = document.querySelector(`input[name="q${index}"]:checked`);
             if (selected) {
-                // Reset warna sebelumnya
                 const labels = document.querySelectorAll(`input[name="q${index}"]`);
-                labels.forEach(lbl => lbl.parentElement.style.backgroundColor = 'transparent');
+                labels.forEach(lbl => lbl.parentElement.style.backgroundColor = '#f8fafc'); // Reset ke warna awal
+                labels.forEach(lbl => lbl.parentElement.style.borderColor = '#cbd5e0');
 
                 if (parseInt(selected.value) === questions[index].a) {
-                    selected.parentElement.style.backgroundColor = '#d4edda'; // Hijau
+                    selected.parentElement.style.backgroundColor = '#c6f6d5'; // Hijau
+                    selected.parentElement.style.borderColor = '#48bb78';
                 } else {
-                    selected.parentElement.style.backgroundColor = '#f8d7da'; // Merah
+                    selected.parentElement.style.backgroundColor = '#fed7d7'; // Merah
+                    selected.parentElement.style.borderColor = '#f56565';
                 }
             }
         }
@@ -466,16 +600,18 @@
         // Fungsi Hitung Skor
         function hitungSkor() {
             let skor = 0;
+            let benar = 0;
             questions.forEach((item, index) => {
                 const selected = document.querySelector(`input[name="q${index}"]:checked`);
                 if (selected && parseInt(selected.value) === item.a) {
+                    benar++;
                     skor += 2.5; // 40 soal x 2.5 = 100
                 }
             });
 
             const scoreDisplay = document.getElementById('score-display');
             scoreDisplay.style.display = 'block';
-            scoreDisplay.innerHTML = `Skor Anda: ${skor} / 100 <br> <span style="font-size:16px; font-weight:normal;">(Jumlah jawaban benar: ${skor / 2.5} dari 40 soal)</span>`;
+            scoreDisplay.innerHTML = `Nilai Akhir Anda: ${skor} / 100 <br> <span style="font-size:18px; font-weight:normal; display:block; margin-top:10px;">(Jawaban Benar: ${benar} dari 40 Soal)</span>`;
             
             // Scroll ke skor
             scoreDisplay.scrollIntoView({ behavior: 'smooth' });
