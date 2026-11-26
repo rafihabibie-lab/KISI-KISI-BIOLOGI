@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahan Ajar Biologi Kelas XI - SAS</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 { margin: 0; font-size: 24px; }
+        header p { margin: 5px 0 0; font-size: 14px; opacity: 0.8; }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Materi Section */
+        .materi-section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 20px;
+        }
+
+        .indikator {
+            background-color: #e8f4fd;
+            border-left: 4px solid var(--secondary-color);
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            margin-right: 5px;
+        }
+        .c1 { background-color: #3498db; }
+        .c2 { background-color: #2ecc71; }
+        .c3 { background-color: #f39c12; }
+        .c4 { background-color: #e74c3c; }
+
+        ul { margin-top: 5px; }
+        li { margin-bottom: 8px; }
+
+        /* Kuis Section */
+        .quiz-container {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .question-card {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question-text { font-weight: 600; margin-bottom: 10px; }
+
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .options label:hover { background-color: #f0f0f0; }
+        .options input { margin-right: 10px; }
+
+        .pembahasan {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            font-size: 0.9em;
+            border-radius: 4px;
+        }
+
+        .btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover { background-color: #2980b9; }
+        
+        #score-display {
+            display: none;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            margin: 0 10px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bahan Ajar Interaktif Biologi Kelas XI</h1>
+        <p>Persiapan Sumatif Akhir Semester (SAS) - Lengkap dengan Kuis & Pembahasan</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="nav-links">
+            <a href="#materi">📚 Materi Belajar</a> | 
+            <a href="#kuis">📝 Kuis Interaktif (40 Soal)</a>
+        </div>
+
+        <!-- ================= MATERI ================= -->
+        <div id="materi">
+            <div class="materi-section">
+                <h2>BAB 1: Sel dan Transpor Membran</h2>
+                
+                <h3>1. Struktur dan Fungsi Organel Sel</h3>
+                <div class="indikator">
+                    <span class="badge c3">C3</span> Mengidentifikasi substansi genetik & tempat oksidasi sel.<br>
+                    <span class="badge c2">C2</span> Membedakan RE kasar & halus, membran sel.
+                </div>
+                <ul>
+                    <li><strong>Nukleus (Inti Sel):</strong> Mengandung materi genetik (DNA) yang mengatur seluruh aktivitas sel.</li>
+                    <li><strong>Mitokondria:</strong> Tempat utama oksidasi sel (respirasi sel) untuk menghasilkan energi (ATP).</li>
+                    <li><strong>Retikulum Endoplasma (RE) Kasar:</strong> Ditempeli ribosom, berfungsi sintesis protein.</li>
+                    <li><strong>Retikulum Endoplasma (RE) Halus:</strong> Tanpa ribosom, berfungsi sintesis lipid (lemak) dan detoksifikasi.</li>
+                    <li><strong>Kloroplas:</strong> Hanya ada di tumbuhan, tempat fotosintesis (paling banyak di jaringan palisade/spons daun).</li>
+                </ul>
+
+                <h3>2. Perbedaan Sel Hewan & Tumbuhan</h3>
+                <div class="indikator"><span class="badge c2">C2</span> Menentukan ciri struktural pembeda.</div>
+                <ul>
+                    <li><strong>Sel Hewan:</strong> Tidak punya dinding sel, tidak punya kloroplas, vakuola kecil/banyak, punya sentriol.</li>
+                    <li><strong>Sel Tumbuhan:</strong> Punya dinding sel (selulosa), punya kloroplas, punya vakuola besar/tunggal.</li>
+                </ul>
+
+                <h3>3. Transpor Membran (Pasif & Aktif)</h3>
+                <div class="indikator">
+                    <span class="badge c2">C2</span> Fagositosis, pinositosis, transpor pasif.<br>
+                    <span class="badge c3">C3</span> Karakteristik transpor aktif.<br>
+                    <span class="badge c4">C4</span> Prediksi arah perpindahan air (Osmosis).
+                </div>
+                <ul>
+                    <li><strong>Difusi (Pasif):</strong> Perpindahan zat dari konsentrasi tinggi ke rendah.</li>
+                    <li><strong>Osmosis (Pasif):</strong> Perpindahan air (H2O) dari zat terlarut rendah ke tinggi melalui membran semipermeabel.</li>
+                    <li><strong>Fagositosis:</strong> Sel "memakan" partikel padat (misal: sel darah putih memakan bakteri).</li>
+                    <li><strong>Pinositosis:</strong> Sel "meminum" cairan/tetesan zat terlarut.</li>
+                    <li><strong>Transpor Aktif:</strong> Melawan gradien konsentrasi, <strong>butuh energi (ATP)</strong> dan protein pembawa. Contoh: Pompa Natrium-Kalium.</li>
+                    <li><strong>Percobaan Kentang:</strong> Larutan gula pekat (hipertonik) membuat kentang keriput (air keluar). Air murni (hipotonik) membuat kentang tegang (air masuk).</li>
+                    <li><strong>Model Mozaik Cair:</strong> Teori membran sel oleh Singer & Nicolson (protein mengapung di lipid bilayer).</li>
+                </ul>
+            </div>
+
+            <div class="materi-section">
+                <h2>BAB 2: Sistem Gerak Manusia</h2>
+                
+                <h3>1. Tulang Rawan vs Tulang Keras</h3>
+                <div class="indikator"><span class="badge c2">C2</span> Membedakan komponen penyusun; <span class="badge c1">C1</span> Zat matriks tulang rawan.</div>
+                <ul>
+                    <li><strong>Tulang Rawan (Kartilago):</strong> Matriks lentur (kolagen + kondroitin sulfat). Sel: Kondrosit. Tidak punya pembuluh darah.</li>
+                    <li><strong>Tulang Keras (Osteon):</strong> Matriks keras (kalsium fosfat). Sel: Osteosit. Memiliki pembuluh darah (di saluran Havers).</li>
+                    <li><strong>Tulang Pipa:</strong> Berbentuk silinder panjang, contoh: Femur (paha), Humerus (lengan atas).</li>
+                </ul>
+
+                <h3>2. Otot, Persendian, dan Kelainan</h3>
+                <div class="indikator">
+                    <span class="badge c2">C2</span> Gerak antagonis, atrofi otot.<br>
+                    <span class="badge c3">C3</span> Jenis sendi, kelainan tulang (skoliosis, dll).
+                </div>
+                <ul>
+                    <li><strong>Gerak Antagonis:</strong> Otot Bisep (menekuk) vs Trisep (meluruskan).</li>
+                    <li><strong>Kelelahan Otot:</strong> Disebabkan penumpukan <strong>Asam Laktat</strong> akibat respirasi anaerob.</li>
+                    <li><strong>Atrofi Otot:</strong> Otot mengecil karena lama tidak digerakkan (misal: di-cast).</li>
+                    <li><strong>Sendi Engsel:</strong> Siku, lutut. <strong>Sendi Putar:</strong> Tulang atlas. <strong>Sendi Pelana:</strong> Ibu jari. <strong>Sendi Peluru:</strong> Bahu, pinggul.</li>
+                    <li><strong>Kelainan Tulang:</strong> Skoliosis (bengkok ke samping), Kifosis (bungkuk ke depan), Lordosis (melengkung ke belakang).</li>
+                    <li><strong>Osteoporosis:</strong> Tulang keropos karena kekurangan Kalsium (biasanya lansia).</li>
+                </ul>
+            </div>
+
+            <div class="materi-section">
+                <h2>BAB 3: Sistem Peredaran Darah</h2>
+                <div class="indikator">
+                    <span class="badge c3">C3</span> Aglutinasi transfusi, Eritroblastosis fetalis, skema pembekuan darah, struktur jantung.<br>
+                    <span class="badge c2">C2</span> Ciri pembuluh vena, sistem peredaran terbuka.<br>
+                    <span class="badge c1">C1</span> Zat yang ditranspor limfa, komponen darah.
+                </div>
+                <ul>
+                    <li><strong>Transfusi Darah:</strong> Aglutinasi terjadi jika Antigen pendonor bertemu Antibodi resipien (misal: Donor A ke Resipien B).</li>
+                    <li><strong>Eritroblastosis Fetalis:</strong> Ibu Rh- mengandung janin Rh+ (kehamilan kedua). Antibodi ibu menyerang eritrosit janin.</li>
+                    <li><strong>Pembekuan Darah:</strong> Trombosit pecah → Tromboplastin → Protrombin jadi Trombin (bantuan Vit K & Ca) → Fibrinogen jadi Fibrin (benang pembeku).</li>
+                    <li><strong>Vena:</strong> Membawa darah ke jantung, punya katup (valvula), dinding tipis, tekanan rendah.</li>
+                    <li><strong>Limfa:</strong> Mengangkut lemak (asam lemak) dari usus halus dan sel imun (limfosit).</li>
+                    <li><strong>Peredaran Terbuka:</strong> Darah mengalir ke rongga tubuh (sinus), terjadi pada Invertebrata (serangga) dan Pisces (ikan).</li>
+                    <li><strong>Struktur Jantung:</strong> Serambi (Atrium) tipis, Bilik (Ventrikel) tebal. Katup: Trikuspid (kanan), Bikuspid/Mitral (kiri).</li>
+                    <li><strong>Komponen Darah:</strong> Plasma (cairan), Eritrosit (O2), Leukosit (imun), Trombosit (pembekuan).</li>
+                </ul>
+            </div>
+
+            <div class="materi-section">
+                <h2>BAB 4: Pembelahan Sel</h2>
+                <div class="indikator">
+                    <span class="badge c2">C2</span> Lokasi mitosis, tujuan meiosis, perbedaan oogenesis/spermatogenesis.<br>
+                    <span class="badge c1">C1</span> Teori sel.
+                </div>
+                <ul>
+                    <li><strong>Mitosis:</strong> Terjadi di sel somatis (jaringan meristem tumbuhan: ujung akar/batang) untuk pertumbuhan & regenerasi. Menghasilkan 2 sel anakan identik (diploid).</li>
+                    <li><strong>Meiosis:</strong> Terjadi di organ reproduksi (testis/ovarium) untuk menghasilkan gamet (haploid).</li>
+                    <li><strong>Spermatogenesis:</strong> 1 sel induk → 4 sperma fungsional.</li>
+                    <li><strong>Oogenesis:</strong> 1 sel induk → 1 ovum fungsional + 3 badan polar.</li>
+                    <li><strong>Teori Sel:</strong> Omnis cellula e cellula (sel berasal dari sel sebelumnya).</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr style="border: 0; height: 1px; background: #ddd; margin: 40px 0;">
+
+        <!-- ================= KUIS ================= -->
+        <div id="kuis" class="quiz-container">
+            <h2 style="text-align: center; border:none;">📝 Kuis Interaktif SAS Biologi (40 Soal)</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">Pilih jawaban yang paling tepat. Pembahasan akan muncul setelah Anda memilih.</p>
+            
+            <form id="quiz-form">
+                <!-- Soal akan di-generate oleh JavaScript di sini -->
+            </form>
+
+            <button type="button" class="btn" onclick="hitungSkor()">Selesai & Lihat Skor</button>
+            <div id="score-display"></div>
+        </div>
+
+    </div>
+
+    <script>
+        // Data 40 Soal Pilihan Ganda
+        const questions = [
+            { q: "Organel sel yang berperan sebagai penyimpan substansi genetik dan tempat oksidasi sel secara berurutan adalah...", o: ["Nukleus dan Mitokondria", "Ribosom dan Lisosom", "Nukleus dan Kloroplas", "Mitokondria dan Badan Golgi"], a: 0, p: "Substansi genetik (DNA) disimpan di Nukleus. Oksidasi sel (respirasi) menghasilkan energi di Mitokondria." },
+            { q: "Perbedaan utama antara Retikulum Endoplasma kasar dan halus adalah...", o: ["RE kasar memiliki ribosom, RE halus tidak", "RE kasar menghasilkan lipid, RE halus protein", "RE kasar ada di hewan, RE halus di tumbuhan", "RE kasar tidak memiliki membran, RE halus bermembran"], a: 0, p: "RE kasar ditempeli ribosom (sintesis protein), sedangkan RE halus tidak ditempeli ribosom (sintesis lipid/detoksifikasi)." },
+            { q: "Ciri struktural yang membedakan sel hewan dari sel tumbuhan adalah...", o: ["Sel hewan memiliki dinding sel", "Sel tumbuhan tidak memiliki vakuola", "Sel hewan tidak memiliki kloroplas", "Sel tumbuhan memiliki sentriol"], a: 2, p: "Sel hewan tidak memiliki kloroplas dan dinding sel, sedangkan sel tumbuhan memilikinya." },
+            { q: "Proses sel darah putih membungkus dan memakan bakteri patogen disebut...", o: ["Pinositosis", "Fagositosis", "Osmosis", "Difusi"], a: 1, p: "Fagositosis adalah proses 'memakan' partikel padat (seperti bakteri) oleh sel." },
+            { q: "Model membran sel yang menyatakan bahwa protein mengapung di dalam lapisan lipid disebut...", o: ["Model Sandwich", "Model Mozaik Cair", "Model Unit Membran", "Model Lipid Bilayer"], a: 1, p: "Dikemukakan oleh Singer & Nicolson, membran bersifat dinamis (cair) dengan protein tersebar seperti mozaik." },
+            { q: "Jaringan daun yang paling banyak mengandung kloroplas adalah...", o: ["Epidermis atas", "Jaringan palisade", "Jaringan xilem", "Jaringan floem"], a: 1, p: "Jaringan palisade (tiang) adalah tempat utama fotosintesis berlangsung karena kaya akan kloroplas." },
+            { q: "Seorang siswa merendam kentang dalam larutan gula pekat. Setelah 30 menit, kentang menjadi lembek/keriput. Hal ini terjadi karena...", o: ["Air masuk ke dalam sel kentang (hipotonik)", "Air keluar dari sel kentang (hipertonik)", "Gula masuk ke dalam sel kentang", "Kentang mengalami plasmolisis balik"], a: 1, p: "Larutan gula pekat bersifat hipertonik. Air dari sel kentang keluar menuju larutan gula, sehingga sel kehilangan tekanan turgor dan kentang mengerut." },
+            { q: "Komponen penyusun tulang keras yang memberikan sifat keras adalah...", o: ["Kolagen", "Kalsium fosfat", "Kondroitin sulfat", "Asam hialuronat"], a: 1, p: "Tulang keras didominasi oleh kalsium fosfat dan kalsium karbonat yang membuatnya keras dan kaku." },
+            { q: "Zat penyusun matriks tulang rawan yang memberikan kelenturan adalah...", o: ["Kalsium", "Fosfat", "Kolagen dan kondroitin sulfat", "Fibrinogen"], a: 2, p: "Matriks tulang rawan tersusun dari serat kolagen dan kondroitin sulfat yang lentur." },
+            { q: "Penumpukan zat sisa metabolisme yang menyebabkan kelelahan otot adalah...", o: ["Asam piruvat", "Asam laktat", "Asam urat", "Kreatin"], a: 1, p: "Saat kekurangan oksigen, otot melakukan respirasi anaerob yang menghasilkan asam laktat penyebab pegal/lelah." },
+            { q: "Sendi yang memungkinkan gerakan satu arah seperti pada siku dan lutut adalah...", o: ["Sendi Putar", "Sendi Peluru", "Sendi Engsel", "Sendi Pelana"], a: 2, p: "Sendi engsel (hinge joint) memungkinkan gerakan fleksi dan ekstensi (satu arah)." },
+            { q: "Pada lengan manusia, otot bisep dan trisep bekerja secara antagonis. Fungsi otot trisep adalah...", o: ["Menekuk lengan", "Meluruskan lengan", "Memutar lengan", "Menarik tulang belikat"], a: 1, p: "Bisep berkontraksi untuk menekuk lengan (fleksi), Trisep berkontraksi untuk meluruskan lengan (ekstensi)." },
+            { q: "Pasangan otot yang bekerja antagonis adalah...", o: ["Bisep dan Trisep", "Otot lurik dan otot polos", "Otot jantung dan otot rangka", "Otot abduktor dan otot bisep"], a: 0, p: "Bisep dan Trisep adalah contoh klasik otot antagonis (bekerja berlawanan arah)." },
+            { q: "Jika seseorang bergolongan darah A menerima transfusi dari pendonor bergolongan darah B, maka akan terjadi...", o: ["Tidak terjadi reaksi apa-apa", "Aglutinasi (penggumpalan darah)", "Darah menjadi encer", "Pecahnya eritrosit pendonor"], a: 1, p: "Resipien A memiliki antibodi anti-B. Darah B memiliki antigen B. Bertemunya antigen B dan antibodi anti-B menyebabkan aglutinasi." },
+            { q: "Eritroblastosis fetalis berisiko terjadi pada kondisi...", o: ["Ibu Rh+ mengandung janin Rh-", "Ibu Rh- mengandung janin Rh+ pada kehamilan kedua", "Ibu bergolongan darah O mengandung janin A", "Ibu bergolongan darah AB mengandung janin O"], a: 1, p: "Ibu Rh- membentuk antibodi anti-Rh setelah terpapar darah janin Rh+ di kehamilan pertama. Antibodi ini menyerang janin Rh+ di kehamilan berikutnya." },
+            { q: "Manakah pernyataan berikut yang BUKAN ciri dari pembuluh vena?", o: ["Membawa darah menuju jantung", "Memiliki katup (valvula)", "Dindingnya tebal dan elastis", "Tekanan darahnya rendah"], a: 2, p: "Pembuluh vena memiliki dinding yang tipis dan kurang elastis dibandingkan arteri." },
+            { q: "Zat yang diangkut oleh pembuluh getah bening (limfa) dari usus halus adalah...", o: ["Glukosa", "Asam amino", "Lemak (asam lemak)", "Oksigen"], a: 2, p: "Limfa mengangkut asam lemak hasil penyerapan lemak di usus halus (kilomikron) sebelum masuk ke aliran darah." },
+            { q: "Urutan yang benar dalam proses pembekuan darah adalah...", o: ["Protrombin → Trombin → Fibrinogen → Fibrin", "Fibrinogen → Trombin → Protrombin → Fibrin", "Trombin → Protrombin → Fibrin → Fibrinogen", "Fibrin → Fibrinogen → Protrombin → Trombin"], a: 0, p: "Trombin mengubah Protrombin menjadi Trombin. Trombin kemudian mengubah Fibrinogen menjadi Fibrin (benang pembeku)." },
+            { q: "Pembuluh darah yang membawa darah kaya karbon dioksida adalah...", o: ["Aorta", "Vena Pulmonalis", "Arteri Pulmonalis", "Vena Cava"], a: 2, p: "Arteri Pulmonalis membawa darah kaya CO2 dari ventrikel kanan menuju paru-paru. (Ini pengecualian: arteri kaya CO2)." },
+            { q: "Kelompok hewan yang memiliki sistem peredaran darah terbuka adalah...", o: ["Mamalia", "Aves (burung)", "Pisces (ikan)", "Reptil"], a: 2, p: "Pisces (ikan) dan invertebrata (serangga) memiliki sistem peredaran darah terbuka (darah tidak selalu di pembuluh)." },
+            { q: "Komponen darah yang berperan utama dalam proses pembekuan darah adalah...", o: ["Eritrosit", "Leukosit", "Trombosit", "Plasma darah"], a: 2, p: "Trombosit (keping darah) pecah dan melepaskan tromboplastin untuk memulai kaskade pembekuan." },
+            { q: "Kelainan tulang belakang yang membengkok ke arah samping kiri atau kanan disebut...", o: ["Kifosis", "Lordosis", "Skoliosis", "Osteoporosis"], a: 2, p: "Skoliosis = bengkok ke samping. Kifosis = bungkuk ke depan. Lordosis = melengkung ke belakang." },
+            { q: "Bagian jantung yang memiliki dinding paling tebal adalah...", o: ["Serambi kanan", "Serambi kiri", "Bilik kanan", "Bilik kiri"], a: 3, p: "Bilik kiri (Ventrikel kiri) memiliki dinding paling tebal karena harus memompa darah ke seluruh tubuh (sirkulasi sistemik)." },
+            { q: "Darah dari seluruh tubuh masuk ke jantung melalui...", o: ["Vena cava menuju serambi kanan", "Vena pulmonalis menuju serambi kiri", "Aorta menuju bilik kiri", "Arteri pulmonalis menuju bilik kanan"], a: 0, p: "Darah deoksigenasi dari tubuh kembali ke jantung melalui Vena Cava Superior/Inferior menuju Atrium (Serambi) Kanan." },
+            { q: "Bagian tulang keras tempat pembuluh darah dan saraf berada adalah...", o: ["Lakuna", "Kanalikuli", "Saluran Havers", "Periosteum"], a: 2, p: "Saluran Havers (Sistem Havers) adalah saluran pusat pada osteon yang berisi pembuluh darah dan saraf." },
+            { q: "Transpor membran yang memerlukan energi (ATP) dan protein pembawa untuk melawan gradien konsentrasi adalah...", o: ["Difusi sederhana", "Osmosis", "Difusi terfasilitasi", "Transpor aktif"], a: 3, p: "Transpor aktif membutuhkan energi (ATP) dan protein pembawa untuk memindahkan zat dari konsentrasi rendah ke tinggi." },
+            { q: "Proses masuknya cairan ke dalam sel dengan cara membran sel melekuk membentuk vesikula disebut...", o: ["Fagositosis", "Pinositosis", "Eksositosis", "Endositosis"], a: 1, p: "Pinositosis adalah 'sel minum', yaitu masuknya tetesan cairan ekstraseluler." },
+            { q: "Perbedaan antara difusi dan osmosis adalah...", o: ["Difusi butuh energi, osmosis tidak", "Osmosis hanya untuk air, difusi untuk zat lain", "Difusi dari konsentrasi rendah ke tinggi", "Osmosis terjadi pada zat padat"], a: 1, p: "Osmosis adalah difusi khusus untuk molekul air (H2O) melewati membran semipermeabel." },
+            { q: "Organel yang hanya dimiliki oleh sel tumbuhan dan tidak dimiliki sel hewan adalah...", o: ["Mitokondria", "Ribosom", "Lisosom", "Kloroplas"], a: 3, p: "Kloroplas (tempat fotosintesis) adalah organel khas sel tumbuhan (dan alga)." },
+            { q: "Tokoh yang mengemukakan model membran sel 'Mozaik Cair' adalah...", o: ["Robert Hooke", "Singer dan Nicolson", "Schleiden dan Schwann", "Camillo Golgi"], a: 1, p: "Model mozaik cair dikemukakan oleh S.J. Singer dan G. Nicolson pada tahun 1972." },
+            { q: "Jika sebuah sel tumbuhan berada dalam larutan hipotonik, maka air akan...", o: ["Masuk ke dalam sel, sel menjadi turgid", "Keluar dari sel, sel menjadi plasmolisis", "Tidak terjadi perpindahan", "Air dan zat terlarut bertukar tempat"], a: 0, p: "Larutan hipotonik memiliki konsentrasi zat terlarut rendah. Air akan masuk ke sel tumbuhan sehingga sel menjadi tegang (turgid)." },
+            { q: "Organel sel yang berfungsi sebagai tempat respirasi sel dan penghasil energi adalah...", o: ["Ribosom", "Lisosom", "Mitokondria", "Badan Golgi"], a: 2, p: "Mitokondria adalah 'powerhouse' sel, tempat oksidasi zat makanan untuk menghasilkan ATP." },
+            { q: "Pada tumbuhan tingkat tinggi, pembelahan mitosis terjadi pada jaringan...", o: ["Epidermis", "Meristem (ujung akar/batang)", "Xilem", "Floem"], a: 1, p: "Jaringan meristem adalah jaringan muda yang aktif membelah secara mitosis untuk pertumbuhan." },
+            { q: "Tujuan utama pembelahan meiosis pada organisme adalah...", o: ["Pertumbuhan dan perbaikan jaringan", "Menghasilkan sel gamet yang haploid", "Menghasilkan sel somatik yang diploid", "Memperbanyak jumlah kromosom"], a: 1, p: "Meiosis mereduksi jumlah kromosom menjadi setengah (haploid) untuk membentuk sel kelamin (gamet)." },
+            { q: "Perbedaan hasil akhir oogenesis dan spermatogenesis adalah...", o: ["Oogenesis menghasilkan 4 ovum, spermatogenesis 1 sperma", "Oogenesis menghasilkan 1 ovum fungsional + 3 badan polar", "Spermatogenesis menghasilkan 2 sperma fungsional", "Keduanya menghasilkan 4 sel fungsional"], a: 1, p: "Oogenesis menghasilkan 1 ovum fungsional dan 3 polosit (badan polar) yang mengering. Spermatogenesis menghasilkan 4 sperma fungsional." },
+            { q: "Osteoporosis adalah kondisi tulang keropos yang disebabkan oleh...", o: ["Kelebihan vitamin D", "Kekurangan kalsium dan penurunan hormon estrogen", "Infeksi bakteri pada tulang", "Kekurangan zat besi"], a: 1, p: "Osteoporosis umumnya terjadi pada lansia (terutama wanita menopause) karena penurunan massa tulang akibat kurang kalsium dan estrogen." },
+            { q: "Contoh tulang pipa (tulang panjang) pada tubuh manusia adalah...", o: ["Tulang tengkorak", "Tulang paha (Femur)", "Tulang rusuk", "Tulang pergelangan tangan"], a: 1, p: "Tulang pipa berbentuk silinder panjang, contohnya Femur (paha), Humerus (lengan atas), Tibia (kering), Fibula (betis)." },
+            { q: "Pengecilan otot akibat lama tidak digerakkan (misalnya karena di-cast) disebut...", o: ["Hipertrofi", "Atrofi", "Distrofi", "Tetanus"], a: 1, p: "Atrofi adalah penyusutan/pengecilan otot karena kurangnya aktivitas atau imobilisasi lama." },
+            { q: "Molekul yang dapat melewati membran sel secara difusi sederhana (transpor pasif langsung) adalah...", o: ["Glukosa", "Ion Natrium", "Oksigen (O2) dan Karbon dioksida (CO2)", "Asam amino"], a: 2, p: "Molekul kecil dan non-polar seperti O2 dan CO2 dapat langsung melewati lipid bilayer membran sel." },
+            { q: "Pernyataan 'Omnis cellula e cellula' yang berarti sel berasal dari sel sebelumnya merupakan bagian dari...", o: ["Teori Evolusi", "Teori Sel", "Hukum Mendel", "Teori Abiogenesis"], a: 1, p: "Prinsip tersebut dikemukakan oleh Rudolf Virchow dan menjadi salah satu pilar Teori Sel." }
+        ];
+
+        const form = document.getElementById('quiz-form');
+
+        // Render Soal
+        questions.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'question-card';
+            div.id = `q-${index}`;
+            
+            let optionsHTML = '';
+            item.o.forEach((opt, i) => {
+                optionsHTML += `
+                    <label>
+                        <input type="radio" name="q${index}" value="${i}" onchange="tampilkanPembahasan(${index})">
+                        ${opt}
+                    </label>
+                `;
+            });
+
+            div.innerHTML = `
+                <div class="question-text">${index + 1}. ${item.q}</div>
+                <div class="options">${optionsHTML}</div>
+                <div class="pembahasan" id="p-${index}">
+                    <strong>Pembahasan:</strong> ${item.p}
+                </div>
+            `;
+            form.appendChild(div);
+        });
+
+        // Fungsi Tampilkan Pembahasan saat dijawab
+        function tampilkanPembahasan(index) {
+            const pElement = document.getElementById(`p-${index}`);
+            pElement.style.display = 'block';
+            
+            // Highlight jawaban benar/salah (opsional)
+            const selected = document.querySelector(`input[name="q${index}"]:checked`);
+            if (selected) {
+                if (parseInt(selected.value) === questions[index].a) {
+                    selected.parentElement.style.backgroundColor = '#d4edda'; // Hijau
+                } else {
+                    selected.parentElement.style.backgroundColor = '#f8d7da'; // Merah
+                }
+            }
+        }
+
+        // Fungsi Hitung Skor
+        function hitungSkor() {
+            let skor = 0;
+            questions.forEach((item, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && parseInt(selected.value) === item.a) {
+                    skor += 2.5; // 40 soal x 2.5 = 100
+                }
+            });
+
+            const scoreDisplay = document.getElementById('score-display');
+            scoreDisplay.style.display = 'block';
+            scoreDisplay.innerHTML = `Skor Anda: ${skor} / 100 <br> <span style="font-size:16px; font-weight:normal;">(Jumlah jawaban benar: ${skor / 2.5} dari 40 soal)</span>`;
+            
+            // Scroll ke skor
+            scoreDisplay.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
